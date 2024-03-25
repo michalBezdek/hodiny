@@ -15,13 +15,13 @@ function suprStopky() {
   document.getElementById("demon").innerHTML = ++i;
 }
 
-
-  function suprLimit() {
-    const iCas = parseFloat(document.getElementById("hej").value); 
-    
-    setTimeout(() => {
-        const konec = "tvuj cas vyprsel vrat se po prestavce";
-        alert(konec);
-    }, iCas); 
-  }
-
+function suprLimit() {
+  const seconds = parseFloat(document.getElementById("hej").value);
+  
+  const milliseconds = seconds * 1000;
+  
+  setTimeout(() => {
+    const message = "Tvoje čas vypršel. Vrať se po přestávce.";
+    alert(message);
+  }, milliseconds);
+}
